@@ -1,0 +1,72 @@
+#root > section {
+    min-height: calc(100vh - 107px);
+    padding: 2rem 4rem;
+    display: grid;
+    background-color: rgba(200, 200, 200, .1);
+    backdrop-filter: blur(60px);
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+@media screen and (max-width: 768px) {
+    #root > section {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1.3fr;
+    }
+}
+@media screen and (max-width: 575px) {
+    #root > section {
+        padding-inline: 2rem;
+    }
+}
+@media screen and (max-width: 375px) {
+    #root > section {
+        padding-inline: 1.5rem;
+    }
+}
+.topic .tag {
+    display: block;
+    width: fit-content;
+    text-transform: uppercase;
+    font-size: .83rem;
+    padding: .25rem .75rem;
+    border-radius: 5px;
+    color: var(--neutral-color);
+    background-color: var(--main-color);
+    letter-spacing: 2px;
+}
+.topic .title {
+    width: 80%;
+    margin-block: 1rem;
+    color: var(--secondary-color);
+    font-size: 2.5rem;
+}
+.topic .title svg {
+    font-size: 2.25rem;
+    margin-right: .7rem;
+}
+.topic .join-us p {
+    text-wrap: balance;
+    margin-block: 1rem;
+    line-height: 1.5rem;
+}
+.topic .join-us p span {
+    color: var(--main-color);
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+.topic .join-us a {
+    width: fit-content;
+    display: block;
+}
+.topic .join-us a button {
+    background-color: var(--main-color);
+    color: var(--neutral-color);
+    border-color: var(--main-color);
+}
+.topic .join-us a:hover button {
+    background-color: var(--neutral-color);
+    color: var(--main-color);
+    border-color: var(--main-color);
+}

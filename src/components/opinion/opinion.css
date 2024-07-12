@@ -1,0 +1,89 @@
+.opinion {
+  position: absolute;
+  z-index: 10;
+  width: 80%;
+  padding: 2rem;
+  border-radius: 25px;
+  background-color: #fefefe;
+  box-shadow: 2px 8px 8px rgba(179, 176, 176, 0.1);
+  opacity: 0;
+  scale: 0.5;
+  transition: 0.25s ease-in-out;
+}
+@media screen and (max-width: 768px) {
+  .opinion {
+    width: 75%;
+  }
+}
+.opinion.active {
+  scale: 1;
+  opacity: 1;
+}
+.opinion .member {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.opinion::after {
+  content: "";
+  width: 80px;
+  aspect-ratio: 1/1;
+  background-image: url("../../assets/quote-icon.svg");
+  background-size: cover;
+  position: absolute;
+  top: -30px; 
+  left: -30px;
+}
+.opinion .member .avatar {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+@media screen and (max-width: 768px) {
+  .opinion .member {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+  }
+}
+.opinion .member img {
+  border-radius: 50%;
+  border: 2px solid var(--main-color);
+}
+.opinion .member h3 {
+  font-size: 1.15rem;
+  text-transform: capitalize;
+  color: var(--main-color);
+  letter-spacing: 1.2px;
+}
+.opinion .member p {
+  font-size: 0.98rem;
+  color: #929292;
+}
+.opinion .member span {
+  font-size: 0.95rem;
+  margin-left: auto;
+  align-self: flex-start;
+  font-weight: 500;
+  color: var(--main-color);
+}
+.opinion > p {
+  max-height: 200px;
+  color: var(--secondary-color);
+  overflow-y: scroll;
+  line-height: 1.3rem;
+}
+@media screen and (max-width: 768px) {
+  .opinion > p {
+    max-height: 280px;
+  }
+}
+.opinion > p::-webkit-scrollbar {
+  display: block;
+  width: 6px;
+}
+.opinion > p::-webkit-scrollbar-thumb {
+  background-color: var(--main-color);
+  border-radius: 5px;
+}

@@ -1,0 +1,106 @@
+:root {
+    --main-color: #8D80AD;
+    --secondary-color: #36454F;
+    --neutral-color: #F4F3EE;
+}
+@font-face {
+    font-family: "Fjalla One";
+    src: url("./assets/font/fjalla-one.ttf");
+}
+@font-face {
+    font-family: "Raleway";
+    src: url("./assets/font/raleway.ttf");
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Raleway", sans-serif;
+    font-size: 1rem;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+body {
+    background-color: var(--neutral-color);
+    position: relative;
+    z-index: 5;
+}
+body::after,
+body::before {
+    content: "";
+    width: 10rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: var(--main-color);
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    z-index: -30;
+    animation: rotating 5s ease-in-out infinite both;
+}
+body::before {
+    top: 30%;
+    left: 40%;
+    background-color: #A1CCA5;
+    animation-delay: 2s;
+}
+@keyframes rotating {
+    50% {
+        transform: translate(-20%, -30%);
+        top: 30%;
+        left: 60%;
+    }
+    0%, 100% {
+        transform: translate(-50%, -50%);
+        top: 60%;
+        left: 30%;
+    }
+}
+#root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+h1, h2, h3 {
+    font-family: "Fjalla One";
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+ul, ol {
+    list-style: none;
+}
+button {
+    padding: .8rem 1.3rem .85rem;
+    border: none;
+    outline: none;
+    border-radius: 200px;
+    transition: .25s ease-in-out;
+    cursor: pointer;
+    pointer-events: none;
+    color: var(--main-color);
+    background-color: var(--neutral-color);
+    border: 1px solid transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: .5rem;
+}
+button svg {
+    font-size: 1.2rem;
+}
+@media screen and (max-width: 575px) {
+    button {
+        padding: .75rem 1.2rem .8rem;
+        font-size: .95rem;
+    }
+}
+a:hover button {
+    color: var(--neutral-color);
+    background-color: var(--main-color);
+    border-color: var(--neutral-color);
+}

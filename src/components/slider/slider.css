@@ -1,0 +1,61 @@
+.slider {
+  height: 100%;
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+.slider .controllers {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  pointer-events: none;
+}
+.slider .controllers button {
+  pointer-events: initial;
+  padding: 0.25rem;
+}
+.slider .controllers button:hover {
+  background-color: var(--main-color);
+}
+.slider .controllers button:first-child svg {
+  transform: rotate(180deg);
+}
+.slider .controllers button svg {
+  font-size: 2.5rem;
+  color: var(--main-color);
+  transition: 0.25s ease-in-out;
+}
+.slider .controllers button:hover svg {
+  color: var(--neutral-color);
+}
+.slider .indicators {
+  width: fit-content;
+  position: absolute;
+  bottom: 1.5rem;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+}
+@media screen and (max-width: 768px) {
+  .slider .indicators {
+    bottom: -0.5rem;
+  }
+}
+.slider .indicators li {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #ccc;
+  box-shadow: 1px 2px 2px rgba(179, 176, 176, 0.15);
+  transition: 0.25s ease-in-out;
+  cursor: pointer;
+}
+.slider .indicators li.active {
+  width: 20px;
+  border-radius: 30px;
+  box-shadow: 1px 2px 2px rgba(140, 109, 219, 0.15);
+  background-color: var(--main-color);
+}
