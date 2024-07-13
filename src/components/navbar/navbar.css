@@ -12,12 +12,12 @@ nav {
 }
 @media screen and (max-width: 575px) {
   nav {
-    padding-inline: 2rem;
+    padding-inline: 1.6rem;
   }
 }
 @media screen and (max-width: 375px) {
   nav {
-    padding-inline: 1.5rem;
+    padding-inline: 1.2rem;
   }
 }
 nav img {

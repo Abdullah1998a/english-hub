@@ -18,12 +18,12 @@
 }
 @media screen and (max-width: 575px) {
   #root > section {
-    padding-inline: 2rem;
+    padding-inline: 1.6rem;
   }
 }
 @media screen and (max-width: 375px) {
   #root > section {
-    padding-inline: 1.5rem;
+    padding-inline: 1.2rem;
   }
 }
 .topic .tag {

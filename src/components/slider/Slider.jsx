@@ -1,26 +1,31 @@
-import { motion } from "framer-motion"
+import { AnimatePresence } from "framer-motion";
 import { Opinion } from "../opinion";
 import { useState } from "react";
 import "./slider.css";
 
 export function Slider({ opinions, date }) {
   const [current, setCurrent] = useState(0);
+  const [direction, setDirection] = useState(false);
   const handleController = (state = "") => {
     if (state == "increase") {
       setCurrent((prev) => prev + 1);
       if (current >= opinions.length - 1) {
         setCurrent(0);
       }
+      setDirection(true);
     } else {
       setCurrent((prev) => prev - 1);
       if (current < 1) {
         setCurrent(opinions.length - 1);
       }
+      setDirection(false);
     }
   };
   return (
     <section className="slider">
-      <Opinion key={opinions[current].id} POV={opinions[current]} date={date} />
+      <AnimatePresence mode="wait" onExitComplete={true} custom={direction}>
+        <Opinion POV={opinions[current]} key={opinions[current].id} date={date} />
+      </AnimatePresence>
       <div className="controllers">
         <button onClick={() => handleController()}>
           <svg

@@ -4,7 +4,6 @@
   border-radius: 25px;
   background-color: #fefefe;
   box-shadow: 2px 8px 8px rgba(179, 176, 176, 0.1);
-  transition: 0.25s ease-in-out;
   position: relative;
 }
 @media screen and (max-width: 1024px) {
