@@ -1,23 +1,22 @@
 .opinion {
-  position: absolute;
-  z-index: 10;
   width: 80%;
   padding: 2rem;
   border-radius: 25px;
   background-color: #fefefe;
   box-shadow: 2px 8px 8px rgba(179, 176, 176, 0.1);
-  opacity: 0;
-  scale: 0.5;
   transition: 0.25s ease-in-out;
+  position: relative;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .opinion {
-    width: 75%;
+    padding: 1.2rem;
+    width: 83%;
   }
 }
-.opinion.active {
-  scale: 1;
-  opacity: 1;
+@media screen and (max-width: 375px) {
+  .opinion {
+    width: 95%;
+  }
 }
 .opinion .member {
   display: flex;
@@ -32,14 +31,20 @@
   background-image: url("../../assets/quote-icon.svg");
   background-size: cover;
   position: absolute;
-  top: -30px; 
+  top: -30px;
   left: -30px;
 }
-.opinion .member .avatar {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+@media screen and (max-width: 1024px) {
+  .opinion::after {
+    top: -38px;
+    left: -38px;
   }
+}
+.opinion .member .avatar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
 @media screen and (max-width: 768px) {
   .opinion .member {
     flex-direction: column;
@@ -69,15 +74,10 @@
   color: var(--main-color);
 }
 .opinion > p {
-  max-height: 200px;
   color: var(--secondary-color);
-  overflow-y: scroll;
   line-height: 1.3rem;
-}
-@media screen and (max-width: 768px) {
-  .opinion > p {
-    max-height: 280px;
-  }
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 .opinion > p::-webkit-scrollbar {
   display: block;

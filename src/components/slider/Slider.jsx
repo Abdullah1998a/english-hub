@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Opinion } from "../opinion";
 import "./slider.css";
 
-export function Slider({ opinions }) {
+export function Slider({ opinions, date }) {
   const [current, setCurrent] = useState(0);
   const handleController = (state = "") => {
     if (state == "increase") {
@@ -19,13 +19,7 @@ export function Slider({ opinions }) {
   };
   return (
     <section className="slider">
-      {opinions.map((opinion) => (
-        <Opinion
-          key={opinion.id}
-          POV={opinion}
-          show={opinion.id == current + 1 ? true : false}
-        />
-      ))}
+      <Opinion key={opinions[current].id} POV={opinions[current]} date={date} />
       <div className="controllers">
         <button onClick={() => handleController()}>
           <svg

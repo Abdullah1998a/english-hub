@@ -10,6 +10,27 @@
   align-items: center;
   justify-content: space-between;
   pointer-events: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+@media screen and (max-width: 1024px) {
+  .slider .controllers {
+    width: 110%;
+  }
+}
+@media screen and (max-width: 425px) {
+  .slider .controllers {
+    width: 115%;
+  }
+}
+@media screen and (max-width: 375px) {
+  .slider .controllers {
+    width: 110%;
+    top: initial;
+    bottom: -1.7rem;
+    transform: translateY(0);
+  }
 }
 .slider .controllers button {
   pointer-events: initial;
@@ -32,7 +53,7 @@
 .slider .indicators {
   width: fit-content;
   position: absolute;
-  bottom: 1.5rem;
+  bottom: -1.7rem;
   flex-wrap: wrap;
   display: flex;
   justify-content: center;
@@ -41,7 +62,7 @@
 }
 @media screen and (max-width: 768px) {
   .slider .indicators {
-    bottom: -0.5rem;
+    bottom: -1.7rem;
   }
 }
 .slider .indicators li {

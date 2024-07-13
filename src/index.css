@@ -16,7 +16,6 @@
     margin: 0;
     padding: 0;
     font-family: "Raleway", sans-serif;
-    font-size: 1rem;
 }
 ::-webkit-scrollbar {
     display: none;
@@ -24,7 +23,7 @@
 body {
     background-color: var(--neutral-color);
     position: relative;
-    z-index: 5;
+    font-size: 1rem;
 }
 body::after,
 body::before {

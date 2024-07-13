@@ -2,7 +2,7 @@ import { Slider } from "../slider";
 import "./topic.css";
 
 export function Topic({ topic }) {
-  const { id, title, opinions } = topic;
+  const { id, title, date, opinions } = topic;
   return (
     <section id={id}>
       <div className="topic">
@@ -30,20 +30,15 @@ export function Topic({ topic }) {
                 </g>
               </mask>
             </defs>
-            <path
-              fill="#36454F"
-              d="M0 0h48v48H0z"
-              mask="url(#ipSTopic0)"
-            />
+            <path fill="#36454F" d="M0 0h48v48H0z" mask="url(#ipSTopic0)" />
           </svg>
           {title}
         </h1>
         <div className="join-us">
           <p>
-            You want to engage in such a great discussion!
-            <br />
-            Kindly, join our group now and share your thoughts
-            <br /> with more than <span>10</span> active members.
+            You want to engage in such a great discussion! Kindly, join our
+            group now and share your thoughts with more than <span>10</span>{" "}
+            active members.
           </p>
           <a
             href="https://chat.whatsapp.com/KkmMsDnNSNgLtg8FjtVo8r"
@@ -87,7 +82,7 @@ export function Topic({ topic }) {
           </a>
         </div>
       </div>
-      <Slider opinions={opinions} />
+      <Slider opinions={opinions} date={date} />
     </section>
   );
 }
