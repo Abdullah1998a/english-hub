@@ -15,6 +15,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-size: 1rem;
     font-family: "Raleway", sans-serif;
 }
 ::-webkit-scrollbar {
@@ -23,7 +24,6 @@
 body {
     background-color: var(--neutral-color);
     position: relative;
-    font-size: 1rem;
 }
 body::after,
 body::before {
