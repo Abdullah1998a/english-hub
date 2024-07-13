@@ -1,30 +1,35 @@
 nav {
-    background-color: var(--main-color);
-    padding: .9rem 4rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  background: var(--main-color);
+  background: linear-gradient(
+    135deg,
+    var(--main-color),
+    #8864c7
+  );
+  padding: 0.9rem 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 @media screen and (max-width: 575px) {
-    nav {
-        padding-inline: 2rem;
-    }
+  nav {
+    padding-inline: 2rem;
+  }
 }
 @media screen and (max-width: 375px) {
-    nav {
-        padding-inline: 1.5rem;
-    }
+  nav {
+    padding-inline: 1.5rem;
+  }
 }
 nav img {
-    width: 7rem;
+  width: 7rem;
 }
 @media screen and (max-width: 575px) {
-    nav img {
-        width: 6rem;
-    }
+  nav img {
+    width: 6rem;
+  }
 }
 @media screen and (max-width: 375px) {
-    nav img {
-        width: 5rem;
-    }
+  nav img {
+    width: 5rem;
+  }
 }

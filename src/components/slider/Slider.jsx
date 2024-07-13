@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { motion } from "framer-motion"
 import { Opinion } from "../opinion";
+import { useState } from "react";
 import "./slider.css";
 
 export function Slider({ opinions, date }) {
