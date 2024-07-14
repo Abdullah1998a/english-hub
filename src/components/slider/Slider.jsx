@@ -22,6 +22,7 @@ export function Slider({ opinions, date }) {
     }
   };
   useEffect(() => {
+    console.log("opinions updated", opinions);
     setCurrent(0);
   }, [opinions]);
   return (
