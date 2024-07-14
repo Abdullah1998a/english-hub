@@ -3,7 +3,7 @@ import { Opinion } from "../opinion";
 import { useState, useEffect } from "react";
 import "./slider.css";
 
-export function Slider({ opinions, date }) {
+export function Slider({ opinions, date, topicID }) {
   const [current, setCurrent] = useState(0);
   const [direction, setDirection] = useState(false);
   const handleController = (state = "") => {
@@ -22,9 +22,8 @@ export function Slider({ opinions, date }) {
     }
   };
   useEffect(() => {
-    console.log("opinions updated", opinions);
     setCurrent(0);
-  }, [opinions]);
+  }, [topicID]);
   return (
     <section className="slider">
       <AnimatePresence mode="wait" onExitComplete={true} custom={direction}>
