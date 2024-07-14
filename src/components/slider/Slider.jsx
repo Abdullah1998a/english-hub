@@ -1,6 +1,6 @@
 import { AnimatePresence } from "framer-motion";
 import { Opinion } from "../opinion";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./slider.css";
 
 export function Slider({ opinions, date }) {
@@ -21,6 +21,9 @@ export function Slider({ opinions, date }) {
       setDirection(false);
     }
   };
+  useEffect(() => {
+    setCurrent(0);
+  }, [opinions]);
   return (
     <section className="slider">
       <AnimatePresence mode="wait" onExitComplete={true} custom={direction}>
