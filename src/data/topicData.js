@@ -19,7 +19,12 @@ export const topic = [
   },
   {
     id: 4,
-    title: "test test test test test test test test ",
+    title: "What inspires you to keep going when things get tough ? and why ?!",
     date: "14 July, 2024",
+  },
+  {
+    id: 5,
+    title: "Do you support or not the issue of polygamy ? and why ?!",
+    date: "15 July, 2024",
   },
 ];

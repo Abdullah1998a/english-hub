@@ -56,4 +56,10 @@ export const members = [
     avatar: defaultAvatar,
     rank: "Playa",
   },
+  {
+    id: 10,
+    name: "Sara Mohamed",
+    avatar: defaultAvatar,
+    rank: "Playa",
+  },
 ];

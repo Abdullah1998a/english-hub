@@ -118,6 +118,47 @@ export const opinions = [
   },
   {
     topicID: 4,
+    ideas: [
+      {
+        id: 1,
+        memberID: 1,
+        opinion:
+          "I keep going during tough times with two things, First, seeing progress because it is a great motivator in itself, and also improves myself-esteem, continue to set new goals, think about what I want to achieve next week, next month and next year. Tackle one goal at a time so I don't feel overwhelmed. Second, surround myself with positivity, the people that I should surround myself with they should have a big impact on my motivation and making sure that I'm surrounded by positive people who support my goals.",
+      },
+      {
+        id: 2,
+        memberID: 7,
+        opinion:
+          "When things get tough sometimes, I remember that life just as it shows us the sweet side, sometimes also shows us the bitter side, Life isn't rosy all the time, we have to remember what we doing for! So we have no choice but to keep going, I remember that’s the pain is temporary and the key for any success is consistency.",
+      },
+      {
+        id: 3,
+        memberID: 10,
+        opinion:
+          "The one who inspires me is always me in good days and better days as well and I think that’s for the best, I mean not to expect anything from anyone being independent is gold.",
+      },
+      {
+        id: 4,
+        memberID: 8,
+        opinion:
+          "What inspires me to keep going in this hard life is my goal prepared beforehand. Everyone should have his own goals before his eyes in order not to live in chaos, I always plan what I am going to do.",
+      },
+      {
+        id: 5,
+        memberID: 9,
+        opinion:
+          "When feel l lost my passion in everything, l make isolated session to check details of my life to touch the reason of this feeling. After that, I wake up to Al-fajr prayer, also reading the Holy Quran when l done this point l feel that I’m ready to face anything in my life even if it hard I feel like Allah stands with me.",
+      },
+      {
+        id: 6,
+        memberID: 2,
+        opinion:
+          "When things turn against expectations, of course I will feel disappointed but I am an optimistic person, so I always look at the full half of the cup and thank God in every case because it could be worse than that. I sit alone and clear my mind, maybe write another plan. I try to push away anything negative, even if they are people. If there are experienced people in my life, I will definitely take their advice. Because their advice will save me a lot of effort and thinking.",
+      },
+    ],
+  },
+  {
+    topicID: 5,
     ideas: [],
   },
 ];
