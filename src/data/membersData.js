@@ -50,4 +50,10 @@ export const members = [
     avatar: defaultAvatar,
     rank: "Playa",
   },
+  {
+    id: 9,
+    name: "Heba Alqawaba'a",
+    avatar: defaultAvatar,
+    rank: "Playa",
+  },
 ];

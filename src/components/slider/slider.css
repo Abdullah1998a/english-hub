@@ -34,6 +34,7 @@
 }
 .slider .controllers button {
   pointer-events: initial;
+  box-shadow: 2px 4px 4px rgba(179, 176, 176, 0.15);
   padding: 0.25rem;
 }
 .slider .controllers button:hover {
@@ -74,4 +75,12 @@
   border-radius: 30px;
   box-shadow: 1px 2px 2px rgba(140, 109, 219, 0.15);
   background-color: var(--main-color);
+}
+.empty-opinions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.empty-opinions img {
+  width: 45%;
 }

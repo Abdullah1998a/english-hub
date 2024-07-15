@@ -77,6 +77,13 @@
   line-height: 1.3rem;
   overflow-wrap: break-word;
   hyphens: auto;
+  max-height: 280px;
+  overflow-y: scroll;
+}
+@media screen and (max-width: 768px) {
+  .opinion > p {
+    max-height: 300px;
+  }
 }
 .opinion > p::-webkit-scrollbar {
   display: block;

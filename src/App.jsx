@@ -1,15 +1,17 @@
-import { Navbar, Topic, Pagination } from "./components";
+import { Navbar, Pagination, Topic } from "./components";
 import { topic } from "./data/topicData";
 import { useState } from "react";
 
 export default function App() {
-  const [current, setCurrent] = useState(0);
+  const [currentTopic, setCurrentTopic] = useState(0);
   return (
     <>
-      <div className="sth"></div>
       <Navbar />
-      <Topic topic={topic[current]} />
-      <Pagination current={current} setCurrent={setCurrent} />
+      <Topic topic={topic[currentTopic]} />
+      <Pagination
+        currentTopic={currentTopic}
+        setCurrentTopic={setCurrentTopic}
+      />
     </>
   );
 }

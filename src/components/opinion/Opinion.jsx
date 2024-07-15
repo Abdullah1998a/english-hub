@@ -13,15 +13,14 @@ const sliderVariants = {
   },
   exit: (direction) => ({
     opacity: 0,
-    x: direction ? 100 : -100,
+    x: direction ? -100 : 100,
   }),
 };
-export function Opinion({ POV, date }) {
+export function Opinion({ POV, direction, date }) {
   const { memberID, opinion } = POV;
   const { name, rank, avatar } = members.find(
     (member) => member.id == memberID
   );
-  console.log();
   return (
     <motion.div
       variants={sliderVariants}
@@ -29,6 +28,7 @@ export function Opinion({ POV, date }) {
       animate="visible"
       exit="exit"
       transition={{ type: "tween", duration: 0.25 }}
+      custom={direction}
       className="opinion"
     >
       <div className="member">

@@ -1,30 +1,51 @@
+import emptyOpinions from "../../assets/empty-opinions.png";
+import { opinions } from "../../data/opinionsData";
 import { AnimatePresence } from "framer-motion";
+import { useEffect, useState } from "react";
 import { Opinion } from "../opinion";
-import { useState } from "react";
 import "./slider.css";
 
-export function Slider({ opinions, date }) {
-  const [current, setCurrent] = useState(0);
+export function Slider({ id, date }) {
+  const [currentSlide, setCurrentSlide] = useState(0);
   const [direction, setDirection] = useState(false);
+  const opinion = opinions.find((item) => item.topicID == id).ideas;
   const handleController = (state = "") => {
+    let length = opinion.length;
     if (state == "increase") {
-      setCurrent((prev) => prev + 1);
-      if (current >= opinions.length - 1) {
-        setCurrent(0);
-      }
+      let newSlide = currentSlide + 1;
+      setCurrentSlide(newSlide >= length ? 0 : newSlide);
       setDirection(true);
     } else {
-      setCurrent((prev) => prev - 1);
-      if (current < 1) {
-        setCurrent(opinions.length - 1);
-      }
+      let newSlide = currentSlide - 1;
+      setCurrentSlide(newSlide < 0 ? length - 1 : newSlide);
       setDirection(false);
     }
   };
+  useEffect(() => {
+    setCurrentSlide(0);
+  }, [id]);
+  if (opinion.length == 0) {
+    return (
+      <div className="empty-opinions">
+        <img src={emptyOpinions} alt="empty opinions" />
+      </div>
+    );
+  }
   return (
     <section className="slider">
-      <AnimatePresence mode="wait" onExitComplete={true} custom={direction}>
-        <Opinion POV={opinions[current]} key={opinions[current].id} date={date} />
+      <AnimatePresence
+        mode="wait"
+        onExitComplete={() => true}
+        custom={direction}
+      >
+        {opinion[currentSlide] && (
+          <Opinion
+            POV={opinion[currentSlide]}
+            direction={direction}
+            key={opinion[currentSlide].id}
+            date={date}
+          />
+        )}
       </AnimatePresence>
       <div className="controllers">
         <button onClick={() => handleController()}>
@@ -61,11 +82,11 @@ export function Slider({ opinions, date }) {
         </button>
       </div>
       <ul className="indicators">
-        {opinions.map(({ id }) => (
+        {opinion.map(({ id }) => (
           <li
-            className={id == current + 1 ? "active" : null}
+            className={id == currentSlide + 1 ? "active" : null}
             key={id}
-            onClick={() => setCurrent(id - 1)}
+            onClick={() => setCurrentSlide(id - 1)}
           ></li>
         ))}
       </ul>

@@ -2,7 +2,7 @@ import { Slider } from "../slider";
 import "./topic.css";
 
 export function Topic({ topic }) {
-  const { title, date, opinions } = topic;
+  const { id, title, date } = topic;
   return (
     <section>
       <div className="topic">
@@ -82,7 +82,7 @@ export function Topic({ topic }) {
           </a>
         </div>
       </div>
-      <Slider opinions={opinions} date={date} />
+      <Slider id={id} date={date} />
     </section>
   );
 }
