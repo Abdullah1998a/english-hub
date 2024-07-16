@@ -36,7 +36,7 @@ export function Topic({ topic }) {
         </h1>
         <div className="join-us">
           <p>
-            You want to engage in such a great discussion! Kindly, join our
+            You want to engage in such a great discussion!<br/> Kindly, join our
             group now and share your thoughts with more than <span>10</span>{" "}
             active members.
           </p>
